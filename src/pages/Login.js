@@ -33,8 +33,6 @@ class Login extends Component {
   };
 
   handleClick = () => {
-    // const { dispatch } = this.props;
-    // dispatch(saveUserLogin(this.state));
     const { dispatch, history } = this.props;
     dispatch(saveUserLogin(this.state));
     history.push('/carteira');
@@ -56,6 +54,7 @@ class Login extends Component {
             name="email"
             value={ email }
             data-testid="email-input"
+            placeholder="exemplo@exemplo.com"
             onChange={ this.handleChange }
           />
           <input
