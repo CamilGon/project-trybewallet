@@ -40,11 +40,11 @@ describe('Testa se a aplicação esta funcionando como deveria', () => {
 
   it('Testa o formulário funciona corretamente', () => {
     const { getByTestId, getByText } = renderWithRedux(
-      <MemoryRouter initialEntries={ ['/'] }>
-        <BrowserRouter>
+      <BrowserRouter>
+        <MemoryRouter initialEntries={ ['/'] }>
           <App />
-        </BrowserRouter>
-      </MemoryRouter>,
+        </MemoryRouter>
+      </BrowserRouter>,
     );
 
     const email = getByTestId('email-input');
@@ -67,12 +67,13 @@ describe('Testa se a aplicação esta funcionando como deveria', () => {
 
   it('Testa se o botão "Adicionar despesa" funciona corretamente', async () => {
     const { getByTestId, getByText, debug } = renderWithRedux(
-      <MemoryRouter initialEntries={ ['/'] }>
-        <BrowserRouter>
+      <BrowserRouter>
+        <MemoryRouter initialEntries={ ['/'] }>
           <App />
-        </BrowserRouter>
-      </MemoryRouter>,
+        </MemoryRouter>
+      </BrowserRouter>,
     );
+
     const email = getByTestId('email-input');
     const password = getByTestId('password-input');
     const button = getByText('Entrar');
